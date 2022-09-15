@@ -9,7 +9,8 @@ Register
 <div class="container" style="max-width: 600px">
     <br>
     <form methog="POST" class="form-register" style="color:#f1f1f1">
-        <img class="mb-4" src="https://document-export.canva.com/OZHVo/DAFMTiOZHVo/2/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHWDTJW6UD%2F20220915%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220915T112653Z&X-Amz-Expires=13827&X-Amz-Signature=9b8f3058c6cb19e2f9302844e3e8bb87ee3fff43e82947fe4d2e2e94b71374ad&X-Amz-SignedHeaders=host&response-expires=Thu%2C%2015%20Sep%202022%2015%3A17%3A20%20GMT" alt="phone" style="width: 170px; height: auto; border-radius: 50%">
+        {{ form.hidden_tag() }}
+        <img class="mb-4" src="{{ url_for('static', filename='phone_store.png') }}" alt="phone" style="width: 170px; height: auto; border-radius: 50%">
         <h1 class="h3 mb-3 font-weight-normal">
             Create Account
         </h1>
