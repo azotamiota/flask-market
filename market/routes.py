@@ -1,5 +1,5 @@
 from market import app
-from flask import render_template, redirect, url_for
+from flask import render_template, redirect, url_for, flash
 from market.models import Item, User
 from market.forms import RegisterForm
 from market import db
@@ -27,6 +27,6 @@ def register():
         return redirect(url_for('market'))
     if form.errors != {}:
         for error in form.errors.values():
-            print(f'There was an error: {error}')
+            flash(f'There was an error: {error}')
     return render_template('register.html', form=form)
  
